@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Christian Ako</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-blue-900 text-white p-5 flex justify-between items-center">
@@ -20,11 +23,23 @@
             </ul>
         </nav>
     </header>
-    <main class="p-10 text-left">
-        <h2 class="text-3xl font-bold">Me Contacter</h2>
-        <p class="mt-4">Vous pouvez me contacter par email ou via le formulaire ci-dessous.</p>
-        <p class="mt-4"><strong>Email :</strong><a href="mailto:christianangelaelako@gmail.com"> christianangelaelako@gmail.com</a></p>
-        <p class="mt-2"><strong>Téléphone :</strong><a href="https://wa.me/+330674717663">+330674717663</a></p>
+    <main class="p-10 text-left max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-blue-900">Contact</h2>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="flex items-center space-x-4 p-4 rounded-lg bg-blue-50">
+                    <i class="fas fa-envelope text-blue-500"></i>
+                    <a href="mailto:christianangelaelako@gmail.com" class="hover:underline">christianangelaelako@gmail.com</a>
+                </div><br>
+                <div class="flex items-center space-x-4 p-4 rounded-lg bg-green-50">
+                    <i class="fab fa-whatsapp text-green-500"></i>
+                    <p></p>
+                    <a href="https://wa.me/+330674717663" class="hover:underline">+33 6 74 71 76 63</a>
+                </div>
+            </div>
+        </div>
     </main>
+    
 </body>
 </html>
