@@ -1,5 +1,3 @@
-// script.js
-
 // Ajoute une animation de survol aux liens du menu
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('mouseover', () => {
@@ -30,3 +28,13 @@ function calcul() { return 42; }
 
 // Code obfusqué
 function _0x3a2d(){return 0x2a;}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+        nav.classList.toggle('flex');
+    });
+});
