@@ -9,7 +9,23 @@
     <link rel="stylesheet" href="style1.css">
     <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('hidden');
+                nav.classList.toggle('flex');
+            });
+        }
+    });
+    </script>
+    
 <body class="bg-gray-100 text-gray-900">
+    <button id="menu-toggle" class="md:hidden"><i class="fas fa-bars"></i></button>
+<nav class="hidden md:flex"> ... </nav>
+
     <header class="bg-blue-900 text-white p-5 flex justify-between items-center">
         <h1 class="text-xl font-bold">Compétences</h1>
                 <nav>
@@ -23,9 +39,11 @@
                     </ul>
                 </nav>
     </header>
-    <main class="p-10 text-left">
-        <h2 class="text-3xl font-bold mb-8 text-blue-900">Mes Compétences</h2>
-        <div class="grid md:grid-cols-2 gap-8">
+
+    
+    <main class="p-4 md:p-10 text-left">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-blue-900">Mes Compétences</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div class="bg-white p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-4">📊 Analyse de données</h3>
                 <ul class="list-disc pl-6 space-y-2 text-gray-700">
