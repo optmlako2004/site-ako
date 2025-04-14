@@ -5,6 +5,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f8f9fa;
     color: #333;
+    margin: 0; /* Ajout pour éviter les marges par défaut */
+    padding: 0; /* Ajout pour éviter les espacements par défaut */
 }
 
 header {
@@ -81,4 +83,26 @@ button:hover {
     font-size: 1.2em;
     margin-right: 8px;
 }
+/* Ajout des media queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empile les éléments du header */
+        align-items: center;
+    }
 
+    nav ul {
+        flex-direction: column; /* Empile les liens de navigation */
+        text-align: center;
+    }
+
+    nav li {
+        margin-bottom: 10px; /* Ajoute de l'espace entre les liens */
+    }
+
+    .video-background {
+        height: 50vh; /* Réduit la hauteur de la vidéo sur les petits écrans */
+    }
+    .overlay {
+        background: rgba(0, 0, 0, 0.7); /* Assombrit l'overlay sur les petits écrans */
+    }
+}
