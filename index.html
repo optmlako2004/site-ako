@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Ako - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lien CDN Font Awesome (version gratuite) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-white">
+    
+    <div class="overlay"></div>
+    <video class="video-background" autoplay loop muted>
+        <source src="Top Shot America Drone Cityscape_By_M-ART_Production_Artlist_HD.mp4" type="video/mp4">
+        <source src="Top Shot America Drone Cityscape_By_M-ART_Production_Artlist_HD.webm" type="video/webm">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
+
+    <header class="bg-blue-900 text-white p-5 flex justify-between items-center fixed w-full top-0">
+        <h1 class="text-xl font-bold"><a href="index.html" class="hover:text-gray-300">Christian Ako</a></h1>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-gray-300"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="biographie.html" class="hover:text-gray-300"><i class="fas fa-user"></i> Biographie</a></li>
+                <li><a href="diplomes.html" class="hover:text-gray-300"><i class="fas fa-graduation-cap"></i> Diplômes</a></li>
+                <li><a href="competences.html" class="hover:text-gray-300"><i class="fas fa-book"></i> Compétences</a></li>
+                <li><a href="projets.html" class="hover:text-gray-300"><i class="fas fa-folder-open"></i> Projets</a></li>
+                <li><a href="contact.html" class="hover:text-gray-300"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="cv.html" class="hover:text-gray-300"><i class="fas fa-address-card"></i> CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="flex flex-col items-center justify-center h-screen text-center px-5">
+        <h2 class="text-4xl font-bold mb-4">Étudiant en Informatique à<br>L'UIT Paris Nord de Villetaneuse</h2>
+        <p class="text-lg mb-6">Passionné par la programmation et l'analyse de données.</p>
+        <img src="unnamed.jpg" alt="Photo de Christian Ako" class="w-48 h-48 rounded-full border-4 border-white shadow-lg animate-[floating_3s_ease-in-out_infinite]">
+    </main>
+    
+    <footer class="bg-blue-900 text-white text-center p-4 fixed bottom-0 w-full">
+        <p>&copy; 2025 Christian Ako. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
