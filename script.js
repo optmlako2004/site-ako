@@ -8,7 +8,15 @@ document.querySelectorAll('nav a').forEach(link => {
         link.style.color = '';
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
 
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+        nav.classList.toggle('flex');
+    });
+});
 // Gérer l'envoi du formulaire de contact
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
@@ -36,5 +44,5 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('hidden');
         nav.classList.toggle('flex');
-    });
+    });
 });
