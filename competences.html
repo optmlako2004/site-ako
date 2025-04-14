@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compétences - Christian Ako</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-blue-900 text-white p-5 flex justify-between items-center">
@@ -23,12 +24,49 @@
                 </nav>
     </header>
     <main class="p-10 text-left">
-        <h2 class="text-3xl font-bold">Mes Compétences</h2>
-        <ul class="list-disc pl-6 mt-4">
-            <li><strong>Analyse et Interprétation de données</strong></li>
-            <li><strong>Programmation</strong> : Java, Python, R</li>
-            <li><strong>Développement Web</strong> : HTML, CSS, JavaScript, PHP</li>
-        </ul>
+        <h2 class="text-3xl font-bold mb-8 text-blue-900">Mes Compétences</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">📊 Analyse de données</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                    <li>Visualisation avec Python (Matplotlib/Seaborn)</li>
+                    <li>Traitement de données avec Pandas</li>
+                    <li>Statistiques descriptives</li>
+                </ul>
+            </div>
+    
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">💻 Programmation</h3>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Java</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Python</span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">R</span>
+                </div>
+            </div>
+    
+            <div class="bg-white p-6 rounded-xl shadow-lg md:col-span-2">
+                <h3 class="text-xl font-semibold mb-4">🌐 Développement Web</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="flex items-center space-x-2">
+                        <i class="fab fa-html5 text-orange-500"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fab fa-css3-alt text-blue-500"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fab fa-js-square text-yellow-400"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fab fa-php text-indigo-500"></i>
+                        <span>PHP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    
 </body>
 </html>
