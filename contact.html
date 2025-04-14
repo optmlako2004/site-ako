@@ -10,7 +10,23 @@
     <link rel="stylesheet" href="style1.css">
 
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('hidden');
+                nav.classList.toggle('flex');
+            });
+        }
+    });
+    </script>
+    
 <body class="bg-gray-100 text-gray-900">
+    <button id="menu-toggle" class="md:hidden"><i class="fas fa-bars"></i></button>
+<nav class="hidden md:flex"> ... </nav>
+
     <header class="bg-blue-900 text-white p-5 flex justify-between items-center">
         <h1 class="text-xl font-bold">Contact</h1>
         <nav>
