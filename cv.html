@@ -18,10 +18,25 @@
         .hidden { display: none; }
     </style>
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('hidden');
+                nav.classList.toggle('flex');
+            });
+        }
+    });
+    </script>
+    
 <body class="bg-gray-100 text-white">
+    <button id="menu-toggle" class="md:hidden"><i class="fas fa-bars"></i></button>
+<nav class="hidden md:flex"> ... </nav>
+
     
     <header class="bg-blue-900 bg-opacity-80 text-white p-5 flex justify-between items-center fixed w-full top-0">
-        <!-- Ajout d'un lien vers l'accueil -->
         <h1 class="text-xl font-bold cursor-pointer">
             <a href="index.html">Christian Ako</a>
         </h1>
@@ -35,7 +50,6 @@
     <main class="flex flex-col items-center justify-center min-h-screen text-center px-5">
         <h2 class="text-3xl font-bold mb-4">Mon CV</h2>
 
-        <!-- Affichage direct du CV -->
         <iframe id="cvViewer" src="CV AKO.pdf" class="cv-container"></iframe>
     </main>
     
