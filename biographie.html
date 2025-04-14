@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biographie - Christian Ako</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-blue-900 text-white p-5 flex justify-between items-center">
@@ -22,10 +24,32 @@
             </ul>
         </nav>
     </header>
-    <main class="p-10 text-left">
-        <h2 class="text-3xl font-bold">À propos de moi</h2>
-        <p class="mt-4">Je suis un étudiant en informatique avec une formation pluridisciplinaire, passionné par la programmation, l'analyse de données et le développement web. Mon parcours académique et mes projets m'ont permis d'acquérir des compétences solides dans divers langages et outils.</p>
-        <p class="mt-4">Je m'intéresse particulièrement aux jeux vidéo en équipe, où la collaboration et la stratégie sont essentielles. J'aime également le basket et la natation, qui me permettent de développer persévérance et esprit d'équipe.</p>
+    <main class="p-10 text-left max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-blue-900">À propos de moi</h2>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex flex-col md:flex-row items-center mb-8">
+                <div class="w-32 h-32 bg-gray-200 rounded-full mb-4 md:mb-0 md:mr-8"></div>
+                <div>
+                    <h3 class="text-xl font-semibold">Christian Ako</h3>
+                    <p class="text-gray-600">Étudiant en Informatique</p>
+                </div>
+            </div>
+    
+            <div class="space-y-6">
+                <p class="leading-relaxed">Passionné par l'innovation technologique, je combine mes compétences en programmation et analyse de données pour résoudre des problèmes complexes.</p>
+                
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h4 class="font-semibold mb-2">🎮 Centres d'intérêt</h4>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Développement de jeux vidéo collaboratifs</li>
+                        <li>Basketball en compétition</li>
+                        <li>Natation de haut niveau</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
+    
 </body>
 </html>
