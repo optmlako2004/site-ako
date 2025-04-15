@@ -6,55 +6,34 @@
     <title>Christian Ako - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-
     <style>
         @keyframes floating {
             0% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0); }
         }
-
         .video-background {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             object-fit: cover;
             z-index: -1;
         }
-
         .overlay {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             background: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
     </style>
 </head>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuToggle = document.getElementById('menu-toggle');
-        const nav = document.querySelector('nav');
-        if (menuToggle && nav) {
-            menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('hidden');
-                nav.classList.toggle('flex');
-            });
-        }
-    });
-    </script>
-    
 <body class="bg-gray-100 text-white">
-    <button id="menu-toggle" class="md:hidden"><i class="fas fa-bars"></i></button>
-<nav class="hidden md:flex"> ... </nav>
-
-    
+    <!-- Overlay et vidéo de fond -->
     <div class="overlay"></div>
     <video class="video-background" autoplay loop muted>
         <source src="Top Shot America Drone Cityscape_By_M-ART_Production_Artlist_HD.mp4" type="video/mp4">
@@ -62,32 +41,48 @@
         Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
 
+    <!-- Header responsive -->
     <header class="bg-blue-900 text-white p-5 flex justify-between items-center fixed w-full top-0 z-50">
         <h1 class="text-xl font-bold"><a href="index.html" class="hover:text-gray-300">Christian Ako</a></h1>
-        <button id="menu-toggle" class="md:hidden"><i class="fas fa-bars"></i></button>
-        <nav class="hidden md:flex">
-            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
-                <li><a href="index.html" class="hover:text-gray-300"><i class="fas fa-home"></i> Accueil</a></li>
-                <li><a href="biographie.html" class="hover:text-gray-300"><i class="fas fa-user"></i> Biographie</a></li>
-                <li><a href="diplomes.html" class="hover:text-gray-300"><i class="fas fa-graduation-cap"></i> Diplômes</a></li>
-                <li><a href="competences.html" class="hover:text-gray-300"><i class="fas fa-book"></i> Compétences</a></li>
-                <li><a href="projets.html" class="hover:text-gray-300"><i class="fas fa-folder-open"></i> Projets</a></li>
-                <li><a href="contact.html" class="hover:text-gray-300"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="cv.html" class="hover:text-gray-300"><i class="fas fa-address-card"></i> CV</a></li>
+        <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="main-nav" class="hidden flex-col absolute top-full left-0 w-full bg-blue-900 md:static md:flex md:flex-row md:w-auto md:bg-transparent">
+            <ul class="flex flex-col md:flex-row md:space-x-6">
+                <li><a href="index.html" class="hover:text-gray-300 py-2 px-4 block"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="biographie.html" class="hover:text-gray-300 py-2 px-4 block"><i class="fas fa-user"></i> Biographie</a></li>
+                <li><a href="diplomes.html" class="hover:text-gray-300 py-2 px-4 block"><i class="fas fa-graduation-cap"></i> Diplômes</a></li>
+                <li><a href="competences.html" class="hover:text-gray-300 py-2 px-4 block"><i class="fas fa-book"></i> Compétences</a></li>
+                <li><a href="projets.html" class="hover:text-gray-300 py-2 px-4 block"><i class="fas fa-folder-open"></i> Projets</a></li>
+                <li><a href="contact.html" class="hover:text-gray-300 py-2 px-4 block"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="cv.html" class="hover:text-gray-300 py-2 px-4 block"><i class="fas fa-address-card"></i> CV</a></li>
             </ul>
         </nav>
     </header>
-    
-    <main class="flex flex-col items-center justify-center h-screen text-center px-5">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Étudiant en Informatique à<br>L'UIT Paris Nord de Villetaneuse</h2>
-        <p class="text-lg md:text-xl mb-6">Passionné par la programmation et l'analyse de données.</p>
-        <img src="unnamed.jpg" alt="Photo de Christian Ako" class="w-48 h-auto rounded-full border-4 border-white shadow-lg animate-[floating_3s_ease-in-out_infinite] max-w-full">
+
+    <!-- Contenu principal -->
+    <main class="pt-32 pb-16 flex flex-col items-center justify-center min-h-screen text-center px-4">
+        <h2 class="text-2xl md:text-4xl font-bold mb-4">Étudiant en Informatique à<br>L'UIT Paris Nord de Villetaneuse</h2>
+        <p class="text-base md:text-xl mb-6">Passionné par la programmation et l'analyse de données.</p>
+        <img src="unnamed.jpg" alt="Photo de Christian Ako" class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white shadow-lg animate-[floating_3s_ease-in-out_infinite] mx-auto mb-4 object-cover">
     </main>
-    
+
+    <!-- Footer -->
     <footer class="bg-blue-900 text-white text-center p-4 fixed bottom-0 w-full">
         <p>&copy; 2025 Christian Ako. Tous droits réservés.</p>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <!-- Script menu hamburger -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('main-nav');
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('hidden');
+            });
+        }
+    });
+    </script>
 </body>
 </html>
