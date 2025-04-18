@@ -6,7 +6,7 @@
     <title>Biographie - Christian Ako</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-blue-900 text-white p-5 flex justify-between items-center fixed w-full top-0 z-50">
@@ -39,13 +39,15 @@
             </div>
 
             <div class="space-y-6">
-                <p class="leading-relaxed">Passionné par l’innovation technologique, j’utilise mes compétences en programmation et en analyse de données pour résoudre efficacement des problèmes complexes.</p>
-                
+                <p class="leading-relaxed">
+                    Passionné par l’innovation technologique, j’utilise mes compétences en programmation et en analyse de données pour résoudre efficacement des problèmes complexes et apporter des solutions innovantes.
+                </p>
                 <div class="bg-blue-50 p-4 rounded-lg">
                     <h4 class="font-semibold mb-2">🎮 Centres d'intérêt</h4>
                     <ul class="list-disc pl-6 space-y-1">
                         <li>Basketball</li>
                         <li>Natation</li>
+                        <li>Lecture sur l'intelligence artificielle</li>
                     </ul>
                 </div>
             </div>
@@ -54,21 +56,20 @@
 
     <footer class="bg-blue-900 text-white text-center p-4 fixed bottom-0 w-full">
         <p>&copy; 2025 Christian Ako. Tous droits réservés.</p>
-        
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuToggle = document.getElementById('menu-toggle');
-        const nav = document.querySelector('nav');
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const nav = document.querySelector('nav');
 
-        if (menuToggle && nav) {
-            menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('hidden');
-                nav.classList.toggle('flex');
-            });
-        }
-    });
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', () => {
+                    nav.classList.toggle('hidden');
+                    nav.classList.toggle('flex');
+                });
+            }
+        });
     </script>
 </body>
 </html>
