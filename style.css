@@ -1,22 +1,21 @@
-/* style.css */
-
 /* Styles généraux */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    margin: 0; /* Ajout pour éviter les marges par défaut */
-    padding: 0; /* Ajout pour éviter les espacements par défaut */
-    
+    background-color: #f8f9fa; /* Couleur claire pour un fond propre */
+    color: #333; /* Couleur de texte pour un bon contraste */
+    margin: 0;
+    padding: 0;
 }
 
+/* En-tête */
 header {
-    background-color: #1e3a8a;
+    background-color: #1e3a8a; /* Couleur bleue professionnelle */
     color: white;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet de profondeur */
 }
 
 nav ul {
@@ -29,28 +28,72 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease; /* Animation fluide sur le survol */
 }
 
 nav a:hover {
-    color: #64dfdf;
+    color: #64dfdf; /* Couleur d'accentuation lors du survol */
 }
 
+/* Boutons */
+button, .btn {
+    background: #1e3a8a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background: #64dfdf;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Animation de flottaison */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.animate-floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Pied de page */
 footer {
     background-color: #1e3a8a;
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Formulaire de contact */
+/* Section principale */
+main {
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px; /* Pour éviter que le contenu ne soit caché par l'en-tête */
+}
+
+/* Formulaire */
 form {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 20px auto;
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 input, textarea {
@@ -59,6 +102,12 @@ input, textarea {
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #64dfdf;
+    outline: none;
 }
 
 button {
@@ -68,42 +117,61 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
     background: #64dfdf;
 }
 
-
-.bg-gray-100 {
-    background-color: rgba(243, 244, 246, 0.7);
-}
-
-.fa-home, .fa-user, .fa-graduation-cap {
-    font-size: 1.2em;
-    margin-right: 8px;
-}
-/* Ajout des media queries */
+/* Responsiveness */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Empile les éléments du header */
+        flex-direction: column;
         align-items: center;
     }
 
     nav ul {
-        flex-direction: column; /* Empile les liens de navigation */
+        flex-direction: column;
         text-align: center;
     }
 
     nav li {
-        margin-bottom: 10px; /* Ajoute de l'espace entre les liens */
+        margin-bottom: 10px;
     }
 
     .video-background {
-        height: 50vh; /* Réduit la hauteur de la vidéo sur les petits écrans */
+        height: 50vh;
     }
+
     .overlay {
-        background: rgba(0, 0, 0, 0.7); /* Assombrit l'overlay sur les petits écrans */
+        background: rgba(0, 0, 0, 0.7);
     }
+}
+
+/* Vidéo de fond */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Derrière le contenu */
+    overflow: hidden;
+}
+
+.video-background .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que la vidéo couvre tout l'écran */
+}
+
+.video-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Superposition sombre pour lisibilité */
+    z-index: 1;
 }
