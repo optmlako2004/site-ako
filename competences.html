@@ -1,4 +1,3 @@
-<!-- competences.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compétences - Christian Ako</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style1.css">
-    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -20,48 +18,78 @@
             });
         }
     });
-    </script>
-    
+</script>
+
 <body class="bg-gray-100 text-gray-900">
 
+    <!-- Barre de navigation avec icônes -->
     <header class="bg-blue-900 text-white p-5 flex justify-between items-center">
-        <h1 class="text-xl font-bold">Compétences</h1>
-                <nav>
-                    <ul class="flex space-x-4">
-                        <li><a href="index.html" class="hover:text-gray-300">Accueil</a></li>
-                        <li><a href="diplomes.html" class="hover:text-gray-300">Diplômes</a></li>
-                        <li><a href="projets.html" class="hover:text-gray-300">Projets</a></li>
-                        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
-                        <li><a href="cv.html" class="hover:text-gray-300">CV</a></li>
-        
-                    </ul>
-                </nav>
+        <h1 class="text-xl font-bold flex items-center space-x-2">
+            <i class="fas fa-tools"></i>
+            <span>Compétences</span>
+        </h1>
+        <nav>
+            <ul class="flex space-x-6">
+                <li>
+                    <a href="index.html" class="hover:text-gray-300 flex items-center space-x-2">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="diplomes.html" class="hover:text-gray-300 flex items-center space-x-2">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Diplômes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projets.html" class="hover:text-gray-300 flex items-center space-x-2">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Projets</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="hover:text-gray-300 flex items-center space-x-2">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cv.html" class="hover:text-gray-300 flex items-center space-x-2">
+                        <i class="fas fa-address-card"></i>
+                        <span>CV</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    
+    <!-- Contenu principal -->
     <main class="p-4 md:p-10 text-left">
         <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-blue-900">Mes Compétences</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <!-- Analyse de données -->
             <div class="bg-white p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-4">📊 Analyse de données</h3>
                 <ul class="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>Enquête pour l'etude des données</li>
+                    <li>Enquête pour l'étude des données</li>
                     <li>Visualisation avec Python (Matplotlib)</li>
                     <li>Traitement de données avec Pandas</li>
                     <li>Statistiques descriptives</li>
                 </ul>
             </div>
-    
+
+            <!-- Programmation -->
             <div class="bg-white p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-4">💻 Programmation</h3>
                 <div class="flex flex-wrap gap-2 mt-3">
                     <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Java</span>
                     <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Python</span>
                     <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">R</span>
-                    <span class="bg-pink-100 text-purple-800 px-3 py-1 rounded-full">C</span>
                 </div>
             </div>
-    
+
+            <!-- Développement Web -->
             <div class="bg-white p-6 rounded-xl shadow-lg md:col-span-2">
                 <h3 class="text-xl font-semibold mb-4">🌐 Développement Web</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -85,6 +113,11 @@
             </div>
         </div>
     </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-blue-900 text-white text-center p-4 mt-8">
+        <p>&copy; 2025 Christian Ako. Tous droits réservés.</p>
+    </footer>
     
 </body>
 </html>
