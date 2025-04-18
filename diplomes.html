@@ -6,7 +6,7 @@
     <title>Diplômes - Christian Ako</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-blue-900 text-white p-5 flex justify-between items-center fixed w-full top-0 z-50">
@@ -26,22 +26,21 @@
         <h2 class="text-2xl md:text-3xl font-bold mb-8 text-blue-900">Parcours Académique</h2>
         
         <div class="space-y-6">
-            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div class="bg-white p-6 rounded-xl shadow-lg transition-shadow hover:shadow-xl">
                 <h3 class="text-xl font-semibold flex items-center">
                     <span class="bg-blue-100 p-2 rounded-full mr-3">🎓</span>
                     BUT2 Technologie de l'Information
                 </h3>
                 <p class="text-gray-600 mt-2">Université Paris Sorbonne Nord | 2024-2025</p>
             </div>
-    
-            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+
+            <div class="bg-white p-6 rounded-xl shadow-lg transition-shadow hover:shadow-xl">
                 <a href="attestion bts.pdf" target="_blank" rel="noopener noreferrer">
-                    <h3 class="text-xl font-semibold flex items-center">
-                        <span class="bg-green-100 p-2 rounded-full mr-3">📘</span>
-                        BTS IDA (Admissible)
-                    </h3>
-                    <p class="text-gray-600 mt-2">2022-2023</p>
-                </a>
+                <h3 class="text-xl font-semibold flex items-center">
+                    <span class="bg-green-100 p-2 rounded-full mr-3">📜</span>
+                    BTS IDA (Admissible)
+                </h3>
+                <p class="text-gray-600 mt-2">2022-2023</p>
             </div>
         </div>
     </main>
@@ -51,17 +50,17 @@
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuToggle = document.getElementById('menu-toggle');
-        const nav = document.querySelector('nav');
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const nav = document.querySelector('nav');
 
-        if (menuToggle && nav) {
-            menuToggle.addEventListener('click', () => {
-                nav.classList.toggle('hidden');
-                nav.classList.toggle('flex');
-            });
-        }
-    });
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', () => {
+                    nav.classList.toggle('hidden');
+                    nav.classList.toggle('flex');
+                });
+            }
+        });
     </script>
 </body>
 </html>
